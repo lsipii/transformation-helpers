@@ -12,5 +12,5 @@ npm install transformation-helpers
 
 ```
 import { parseDomain } from "transformation-helpers/Strings";
-parseDomain("https://github.com/lsipii/transformation-helpers") --> "github.com"
+parseDomain("https://github.com/lsipii/transformation-helpers") // --> "github.com"
 ```
