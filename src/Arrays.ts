@@ -338,15 +338,17 @@ export function pickUniqueRandomsFromArray(arr: Array<any>, count: number = 1, c
     const result = [];
 
     for (let i = 1; i <= count; i++) {
-        let triesCount = 0;
-        while (triesCount <= arrLength) {
-            triesCount++;
-
-            const randomItem = arr[Math.floor(Math.random() * arrLength)];
-            if (!ifInArray(result, randomItem, customIfInArrayFunc)) {
-                result.push(randomItem);
-                break; // Break while
+        const metIndexes = [];
+        while (metIndexes.length <= arrLength) {
+            let randomIndex = Math.floor(Math.random() * arrLength);
+            if (!ifInArray(metIndexes, randomIndex)) {
+                const randomItem = arr[randomIndex];
+                if (!ifInArray(result, randomItem, customIfInArrayFunc)) {
+                    result.push(randomItem);
+                    break; // Break while
+                }
             }
+            metIndexes.push(randomIndex);
         }
     }
 
