@@ -32,6 +32,7 @@ test("Tests domain parser", () => {
     expect(parseRootDomain("http://elfs.ulta.com/")).toBe("ulta.com");
     expect(parseRootDomain("http://turtles.ulta.com/")).toBe("ulta.com");
     expect(parseRootDomain("http://test.turtles.ulta.com/")).toBe("ulta.com");
+    expect(parseRootDomain("https://github.com/lsipii/transformation-helpers")).toBe("github.com");
 });
 
 test("Tests some url validations", () => {

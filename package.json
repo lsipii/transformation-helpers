@@ -1,6 +1,6 @@
 {
   "name": "transformation-helpers",
-  "version": "1.0.4",
+  "version": "1.0.7",
   "description": "Utilities library for transforming objects, arrays, strings etc..",
   "directories": {
     "test": "tests"
@@ -12,7 +12,8 @@
     "lint": "prettier --write 'src/**/*.ts'",
     "clean": "rimraf dist/*",
     "build": "npm run clean && babel ./src --out-dir dist/ --ignore ./node_modules,./.babelrc,./package.json,./npm-debug.log --copy-files --extensions '.ts'",
-    "prepare": "npm run build && npm test"
+    "make-package": "npm run build && npm test && node dist/packageSetup.cjs",
+    "publish-package": "cd dist && npm publish"
   },
   "repository": {
     "type": "git",

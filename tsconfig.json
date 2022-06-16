@@ -1,13 +1,13 @@
 {
     "compilerOptions": {
         "target": "es6",
-        "module": "umd",
+        "module": "commonjs",
         "experimentalDecorators": true,
         "outDir": "dist",
         "lib": ["es6"],
         "baseUrl": ".",
         "paths": {
-            "@/*": ["src/helpers/*"]
+            "@/*": ["src/*"]
         }
     },
     "include": ["**/*.ts"],
