@@ -1,6 +1,6 @@
 {
   "name": "transformation-helpers",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "Utilities library for transforming objects, arrays, strings etc..",
   "directories": {
     "test": "tests"
