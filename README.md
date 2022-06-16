@@ -14,8 +14,3 @@ npm install transformation-helpers
 import { parseDomain } from "transformation-helpers/Strings";
 parseDomain("https://github.com/lsipii/transformation-helpers") --> "github.com"
 ```
-
-```
-import { Strings } from "transformation-helpers";
-Strings.parseDomain("https://github.com/lsipii/transformation-helpers") --> "github.com"
-```
