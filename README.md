@@ -1,6 +1,6 @@
 # transformation-helpers
 
-Utilities library for transforming objects, arrays, strings etc..
+JavaScript utilities library for transforming objects, arrays, strings etc..
 
 ## Install
 
