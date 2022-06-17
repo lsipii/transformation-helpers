@@ -3,13 +3,13 @@
         "target": "es6",
         "module": "commonjs",
         "experimentalDecorators": true,
-        "outDir": "dist",
+        "outDir": "dist/",
         "lib": ["es6"],
         "baseUrl": ".",
         "paths": {
             "@/*": ["src/*"]
-        }
+        },
+        "declaration": true
     },
-    "include": ["**/*.ts"],
-    "exclude": ["node_modules", "dist"]
+    "include": ["src/*.ts"]
 }

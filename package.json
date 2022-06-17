@@ -1,17 +1,20 @@
 {
   "name": "transformation-helpers",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "description": "Utilities library for transforming objects, arrays, strings etc..",
   "directories": {
     "test": "tests"
   },
   "type": "module",
   "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "scripts": {
     "test": "jest",
     "lint": "prettier --write 'src/**/*.ts'",
     "clean": "rimraf dist/*",
-    "build": "npm run clean && babel ./src --out-dir dist/ --ignore ./node_modules,./.babelrc,./package.json,./npm-debug.log --copy-files --extensions '.ts'",
+    "build": "npm run clean && npm run build-with-babel && npm run build-type-declarations",
+    "build-with-babel": "babel ./src --out-dir dist/ --ignore ./node_modules,./.babelrc,./package.json,./npm-debug.log --copy-files --extensions '.ts'",
+    "build-type-declarations": "tsc --declaration --outDir dist/ --emitDeclarationOnly --declarationMap",
     "make-package": "npm run build && npm test && node dist/packageSetup.cjs",
     "publish-package": "cd dist && npm publish"
   },
@@ -49,6 +52,6 @@
     "prettier": "^2.4.1",
     "rimraf": "^3.0.2",
     "ts-jest": "^27.0.7",
-    "typescript": "^4.4.4"
+    "typescript": "^4.7.3"
   }
 }
