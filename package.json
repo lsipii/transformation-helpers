@@ -1,11 +1,10 @@
 {
   "name": "transformation-helpers",
-  "version": "1.0.9",
+  "version": "1.0.10",
   "description": "Utilities library for transforming objects, arrays, strings etc..",
   "directories": {
     "test": "tests"
   },
-  "type": "module",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
