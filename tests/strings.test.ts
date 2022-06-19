@@ -123,6 +123,7 @@ test("Tests ifStringContains", () => {
     expect(ifStringContains("Expaa", "ei")).toEqual(false);
 
     expect(ifStringContains("Expaa", ["ei", "paa"])).toEqual(true);
+    expect(ifStringContains("Expaa", ["ei", "paa"], { mustContainAll: true })).toEqual(false);
 
     expect(ifStringContains("Expaa", "paa", { endsWith: true })).toEqual(true);
     expect(ifStringContains("Expaa", "Paa", { endsWith: true })).toEqual(true);

@@ -600,7 +600,7 @@ export function ifString(text: any, ofMinLength: number = 0): boolean {
 export function ifStringContains(
     text: any,
     searchWord: string | Array<string>,
-    opts?: { exact?: boolean; caseSensitive?: boolean; startsWith?: boolean; endsWith?: boolean }
+    opts?: { exact?: boolean; caseSensitive?: boolean; startsWith?: boolean; endsWith?: boolean; mustContainAll?: boolean }
 ): boolean {
     if (ifString(text)) {
         const options = ensureObjectDefaults(opts, {
@@ -608,6 +608,7 @@ export function ifStringContains(
             caseSensitive: false,
             startsWith: false,
             endsWith: false,
+            mustContainAll: false,
         });
 
         // Tester
@@ -634,14 +635,17 @@ export function ifStringContains(
         };
 
         if (searchWord instanceof Array) {
-            let anyMatches = false;
+            let matchesCount = 0;
             for (const _searchWord of searchWord) {
                 if (testererTest(_searchWord, text, options)) {
-                    anyMatches = true;
-                    break;
+                    matchesCount++;
                 }
             }
-            return anyMatches;
+
+            if (options.mustContainAll) {
+                return matchesCount == searchWord.length;
+            }
+            return matchesCount > 0;
         } else {
             return testererTest(searchWord, text, options);
         }
