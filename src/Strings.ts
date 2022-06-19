@@ -88,8 +88,8 @@ export function firstCharToUpperCase(text: string): string {
 
 /**
  *
- * @param text
- * @returns
+ * @param text text-output-string
+ * @returns textOutputString
  */
 export function camelifyDashes(text: string): string {
     if (text.indexOf("-") > -1) {

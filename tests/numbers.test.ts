@@ -1,4 +1,4 @@
-import { parseNumber, sumAny, roundNicely, getAttributeAverageOfItems, niceCalculatePercentage, safeParseFloat, parseStars } from "@/Numbers";
+import { parseNumber, sumAny, roundNicely, getAttributeAverageOfItems, niceCalculatePercentage, safeParseFloat, parseStars } from "../src/Numbers";
 
 test("Tests parseNumber", () => {
     expect(parseNumber(3.5)).toBe(3.5);

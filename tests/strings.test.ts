@@ -14,7 +14,7 @@ import {
     camelifyDashes,
     getDomainPartList,
     chunkString,
-} from "@/Strings";
+} from "../src/Strings";
 
 // ------------------------
 // Tests domain parser

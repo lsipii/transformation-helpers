@@ -6,9 +6,6 @@
         "outDir": "dist/",
         "lib": ["es6"],
         "baseUrl": ".",
-        "paths": {
-            "@/*": ["src/*"]
-        },
         "declaration": true
     },
     "include": ["src/*.ts"]

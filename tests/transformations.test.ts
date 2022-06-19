@@ -1,4 +1,4 @@
-import { ifEquals } from "@/Transformations";
+import { ifEquals } from "../src/Transformations";
 // ------------------------
 // More Equalirium checking utils test
 // ------------------------

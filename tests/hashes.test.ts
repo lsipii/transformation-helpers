@@ -1,4 +1,4 @@
-import { generateBase64Hash, resolveBase64Hash, generateContentId } from "@/Hashes";
+import { generateBase64Hash, resolveBase64Hash, generateContentId } from "../src/Hashes";
 
 // ------------------------
 // Hashes

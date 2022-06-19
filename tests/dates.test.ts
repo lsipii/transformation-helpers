@@ -9,7 +9,7 @@ import {
     getYearsListFromRange,
     getAbsoluteYearDate,
     getCronDateNow,
-} from "@/Dates";
+} from "../src/Dates";
 
 // ------------------------
 // Tests dates parsing of parseHandyDateString

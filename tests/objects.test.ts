@@ -8,7 +8,7 @@ import {
     omitEmptyObjAttrs,
     ifObject,
     ensureObjectDefaults,
-} from "@/Objects";
+} from "../src/Objects";
 
 // ------------------------
 // Tests object merging utilities

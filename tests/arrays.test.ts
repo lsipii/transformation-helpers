@@ -10,7 +10,7 @@ import {
     ifArray,
     pickUniqueRandomsFromArray,
     ifInArray,
-} from "@/Arrays";
+} from "../src/Arrays";
 
 // ------------------------
 // Tests array mapping utilities
